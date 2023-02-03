@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chitikka.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="com.chitikka.app.view.SplashActivity"
+            android:theme="@style/NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <activity
+            android:name="com.chitikka.app.view.ProductActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name="com.chitikka.app.view.LoginActivity" />
+
+        <activity
+            android:name="com.chitikka.app.view.SignUpActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.chitikka.app.view.DetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.chitikka.app.view.AllMobilesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.AllMobilesActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.AllLaptopsActivity"
+            android:label="@string/all_laptops"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.AllMobilesActivity"
+            android:label="@string/all_mobiles"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.CartActivity"
+            android:label="@string/cart"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.WishListActivity"
+            android:label="@string/my_wishList"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.AccountActivity"
+            android:label="@string/my_account"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity"
+            android:theme="@style/AccountTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.AddProductActivity"
+            android:label="@string/add_product"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.HelpActivity"
+            android:label="@string/help_center"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.AllReviewsActivity"
+            android:label="@string/reviews"
+            android:parentActivityName="com.chitikka.app.view.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.DetailsActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.WriteReviewActivity"
+            android:label="@string/write_review"
+            android:parentActivityName="com.chitikka.app.view.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.DetailsActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.PasswordActivity"
+            android:label="@string/change_password"
+            android:parentActivityName="com.chitikka.app.view.AccountActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.AccountActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.CategoryActivity"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.PasswordAssistantActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.chitikka.app.view.AuthenticationActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.chitikka.app.view.NewsFeedActivity"
+            android:label="@string/news_feed"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity android:name="com.chitikka.app.view.ShippingAddressActivity" />
+
+        <activity android:name="com.chitikka.app.view.OrderProductActivity"
+                  android:theme="@style/OrderProductTheme"/>
+
+        <activity
+            android:name="com.chitikka.app.view.OrdersActivity"
+            android:label="@string/orders"
+            android:parentActivityName="com.chitikka.app.view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.ProductActivity" />
+        </activity>
+        <activity
+            android:name="com.chitikka.app.view.StatusActivity"
+            android:label="@string/status"
+            android:parentActivityName="com.chitikka.app.view.OrdersActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chitikka.app.view.OrdersActivity" />
+        </activity>
+
+        <activity android:name="com.chitikka.app.view.SearchActivity" android:theme="@style/noAnimTheme" />
+        <activity android:name="com.chitikka.app.view.ResultActivity"/>
+
+        <receiver android:name="com.chitikka.app.receiver.NetworkChangeReceiver" />
+    </application>
+
+</manifest>
